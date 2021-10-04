@@ -1,0 +1,12 @@
+<section id="event-lists">
+  <div class="mt-12 flex justify-center">
+    <ul class="space-y-3 mt-6">
+      <% @registrations.each do |regis| %>
+      <li class="bg-white shadow-md text-black-600 overflow-hidden px-4 py-4 sm:px-6 sm:rounded-md">
+        <%= regis[:name] %>: <%= regis[:email] %>
+        <br />
+      </li>
+      <%end%>
+    </ul>
+  </div>
+</section>

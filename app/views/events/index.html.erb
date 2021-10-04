@@ -1,0 +1,15 @@
+<section id="event-lists">
+  <div class="mt-12 flex justify-center">
+    <ul class="space-y-3 mt-6">
+      <% @events.each do |event| %>
+      <li class="bg-white shadow-md text-black-600 overflow-hidden px-4 py-4 sm:px-6 sm:rounded-md">
+        <%= event[:name] %>: <%= event[:location] %>, Price <%= price(event) %>
+        <br />
+        <div class="mt-6">
+          <%= link_to "See more detail", event_path(event.id), class: "text-sm text-gray-400" %>
+        </div>
+      </li>
+      <%end%>
+    </ul>
+  </div>
+</section>
